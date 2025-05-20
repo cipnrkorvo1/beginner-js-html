@@ -10,32 +10,43 @@
 
 <body>
     <h1>Calculator</h1>
+
+    <div id="display">
+        <p class="display-text">example text</p>
+    </div>
+
     <div class="button-container">
         <div class="button-line">
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>&divide;</button>
+            <button onclick="back()">&larr;</button>
+            <button onclick="num(7)">7</button>
+            <button onclick="num(8)">8</button>
+            <button onclick="num(9)">9</button>
+            <button onclick="div()">&divide;</button>
         </div>
         <div class="button-line">
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>&times;</button>
+            <button class="_blank"></button>
+            <button onclick="num(4)">4</button>
+            <button onclick="num(5)">5</button>
+            <button onclick="num(6)">6</button>
+            <button onclick="mul()">&times;</button>
         </div>
         <div class="button-line">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>&mdash;</button>
+            <button class="_blank"></button>
+            <button onclick="num(1)">1</button>
+            <button onclick="num(2)">2</button>
+            <button onclick="num(3)">3</button>
+            <button onclick="sub()">&mdash;</button>
         </div>
         <div class="button-line">
-            <button>0</button>
-            <button>&period;</button>
-            <button>&equals;</button>
-            <button>&plus;</button>
+            <button onclick="erase()">CLEAR</button>
+            <button onclick="num(0)">0</button>
+            <button onclick="dec()">&period;</button>
+            <button onclick="compute()">&equals;</button>
+            <button onclick="add()">&plus;</button>
         </div>
     </div>
+
+    <script src="index.js"></script>
 </body>
 
 </html>

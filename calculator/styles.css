@@ -23,10 +23,36 @@
     cursor: pointer;
     float: left;
 
-    flex-grow: 1;
-    min-width: calc(100%/8);
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: none;
+    width: 100px; /* set a fixed width for all buttons */
+    box-sizing: border-box;
+    white-space: nowrap; /* prevent text wrapping */
 
     &:hover {
-        background: #074730;
+        background-color: #074730;
+    }
+
+    &._blank {
+        visibility: hidden;
     }
 }
+
+#display {
+    display: flex;
+    padding-left: 20px;
+    background-color: rgb(193, 190, 206);
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 60px;
+    align-items: center;
+}
+
+.display-text {
+    color: black;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: "Lucida Console";
+}
+
