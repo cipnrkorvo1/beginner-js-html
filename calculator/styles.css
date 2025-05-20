@@ -1,0 +1,32 @@
+.button-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #0001;
+}
+
+.button-line {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-line button {
+    background-color: #0f8358;
+    border: 1px solid rgb(12, 82, 12);
+    padding: 10px 24px;
+    margin-right: 10px;
+    color: white;
+    cursor: pointer;
+    float: left;
+
+    flex-grow: 1;
+    min-width: calc(100%/8);
+
+    &:hover {
+        background: #074730;
+    }
+}
