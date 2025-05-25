@@ -5,12 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <h1>Rock Paper Scissors Game</h1>
-    
 
+    <h3>Choose your move:</h3>
+    <div>
+        <button id="rock" onclick="play('rock')">Rock</button>
+        <button id="paper" onclick="play('paper')">Paper</button>
+        <button id="scissors" onclick="play('scissors')">Scissors</button>
+    </div>
+
+    <h3 id="result"></h3>
+    <div class="score">
+        <h3>Player score:</h3>
+        <h3 id="player-score">0</h3>
+    </div>
+    <div class="score">
+        <h3>Computer score:</h3>
+        <h3 id="computer-score">0</h3>
+    </div>
+
+    <script src="index.js"></script>
+    
 </body>
 
 </html>

@@ -1,0 +1,15 @@
+.score {
+    font-size: 24px;
+    color: #4CAF50;
+    font-weight: bold;
+    margin: 10px 0;
+    display: flex;
+}
+
+#player-score {
+    color: #2196F3;
+}
+
+#computer-score {
+    color: #F44336;
+}
