@@ -1,9 +1,55 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+#move {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    button {
+        margin: 0 10px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border-color: black;
+        border-width: 2px;
+    }
+
+    #rock {
+        background-color: #F44336;
+        color: white;
+    }
+
+    #paper {
+        background-color: #2196F3;
+        color: white;
+    }
+
+    #scissors {
+        background-color: #4CAF50;
+        color: white;
+    }
+}
+
 .score {
     font-size: 24px;
-    color: #4CAF50;
     font-weight: bold;
     margin: 10px 0;
     display: flex;
+
+    h3 {
+        margin: 0 10px;
+    }
 }
 
 #player-score {
