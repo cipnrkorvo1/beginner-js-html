@@ -19,7 +19,7 @@ async function start_solve() {
             if (cell.value === "") {
                 grid[y][x] = -1;
             } else {
-                grid[y][x] = cell.value;
+                grid[y][x] = Number(cell.value);
             }
         }
     }
@@ -36,6 +36,8 @@ async function start_solve() {
 
 class Algorithm {
 
+    seeChanges = false;
+
     constructor(grid, cells) {
         this.grid = grid;
         this.cells = cells
@@ -47,8 +49,9 @@ class Algorithm {
 
     async setCell(pos, n) {
         this.cells[pos].value = n;
-        
-        await new Promise(requestAnimationFrame);
+        if (this.seeChanges) {
+            await new Promise(requestAnimationFrame);
+        }
     }
 
     checkRow(y, n) {
@@ -121,9 +124,11 @@ class BadBruteForce extends Algorithm {
             return await this.tryn(x+1, y)
         }
         let to_try = [1,2,3,4,5,6,7,8,9]
+        // start at a random position and then modulo
+        let randM = Math.floor(Math.random() * 9 + 1)
 
         for (let i = 0; i < 9; i++) {
-            let n = to_try[i]
+            let n = to_try[(i + randM) % 9]
             //console.log(`trying ${n} at (${x}, ${y})`)
             await super.setCell(x+(9*y), n)
 
