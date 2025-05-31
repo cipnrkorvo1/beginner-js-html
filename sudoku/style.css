@@ -3,20 +3,16 @@ body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1 {
-    text-align: center;
-}
-
 .sudoku-cell {
     background-color: #eeeeee;
-    font-size: 2em;
+    font-size: 3em;
     text-align: center;
     padding: 10px;
     width: 1em;
     height: 1em;
     border-color: #111111;
     border-style: solid;
-    border-width: 2px;
+    border-width: 3px;
 }
 
 .sudoku-cell.unsolved {
@@ -30,7 +26,6 @@ h1 {
 [add-border-right=""] {
     border-right-width: 8px;
     margin-right: -4px;
-    margin-left: -2px; /* fixes random issue? */
 }
 [add-border-left=""] {
     border-left-width: 8px;
@@ -49,7 +44,8 @@ h1 {
 }
 
 .wrapper {
-    text-align: center;
+    margin: auto;
+    width: 75%;
 }
 
 button {

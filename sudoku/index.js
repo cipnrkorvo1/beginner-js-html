@@ -1,14 +1,5 @@
 let container = document.getElementById("sudoku-container")
 
-function loadScript(url)
-{    
-    var head = document.getElementsByTagName('head')[0];
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = url;
-    head.appendChild(script);
-}
-
 let grid = Array.from({ length: 9 }, () => Array(9).fill(-1));
 // -1 means empty
 
