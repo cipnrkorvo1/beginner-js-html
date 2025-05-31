@@ -69,6 +69,17 @@ class Algorithm {
     }
 
     checkBox(x, y, n) {
+        let Idxx = this.getBox(x, y)
+        //console.log(Idxx)
+        for (const [bx,by] of Idxx) {
+            if (grid[by][bx] == n) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    getBox(x, y) {
         let Idxx = [
             [0,0],[0,1],[0,2],
             [1,0],[1,1],[1,2],
@@ -79,13 +90,8 @@ class Algorithm {
             item[0] += 3 * Math.floor(x/3);
             item[1] += 3 * Math.floor(y/3);
         })
-        //console.log(Idxx)
-        for (const [bx,by] of Idxx) {
-            if (grid[by][bx] == n) {
-                return false;
-            }
-            return true;
-        }
+        console.log(`getBox(${x},${y}) = ${Idxx}`)
+        return Idxx;
     }
 
     sleep(ms) {
@@ -162,8 +168,12 @@ function init() {
             elem.className = "sudoku-cell"
             elem.x = x
             elem.y = y
-            //elem.gridPos = (y+(9*x))
-            //cells.push(elem);
+            
+            // set styles
+            if (y == 0) {
+                elem.setAttribute("grid-top", "")
+            }
+
             container.appendChild(elem)
 
             //console.log("("+elem.x+","+elem.y+")")

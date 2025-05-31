@@ -8,8 +8,12 @@
     border-color: #111111;
     border-style: solid;
     border-width: 3px;
-    
 }
+
+[grid-top=""] {
+    border-top-width: 5px;
+}
+
 
 #sudoku-container {
     background-color: #aaddaa;
