@@ -15,17 +15,25 @@ body {
     border-width: 3px;
 }
 
+.sudoku-cell.unsolved {
+    color: green;
+}
+
 [add-border-top=""] {
-    border-top-width: 5px;
+    border-top-width: 8px;
+    margin-top:-4px;
 }
 [add-border-right=""] {
-    border-right-width: 5px;
+    border-right-width: 8px;
+    margin-right: -4px;
 }
 [add-border-left=""] {
-    border-left-width: 5px;
+    border-left-width: 8px;
+    margin-left:-4px;
 }
 [add-border-bottom=""] {
-    border-bottom-width: 5px;
+    border-bottom-width: 8px;
+    margin-bottom:-4px;
 }
 
 #sudoku-container {
