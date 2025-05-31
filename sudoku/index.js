@@ -170,8 +170,15 @@ function init() {
             elem.y = y
             
             // set styles
-            if (y == 0) {
-                elem.setAttribute("grid-top", "")
+            if (y % 3 == 0) {
+                elem.setAttribute("add-border-top", "")
+            } else if (y % 3 == 2) {
+                elem.setAttribute("add-border-bottom", "")
+            }
+            if (x % 3 == 0) {
+                elem.setAttribute("add-border-left", "")
+            } else if (x % 3 == 2) {
+                elem.setAttribute("add-border-right", "")
             }
 
             container.appendChild(elem)

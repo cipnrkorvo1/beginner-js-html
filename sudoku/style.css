@@ -1,3 +1,8 @@
+body {
+    background-color: #5d6176;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .sudoku-cell {
     background-color: #eeeeee;
     font-size: 3em;
@@ -10,10 +15,18 @@
     border-width: 3px;
 }
 
-[grid-top=""] {
+[add-border-top=""] {
     border-top-width: 5px;
 }
-
+[add-border-right=""] {
+    border-right-width: 5px;
+}
+[add-border-left=""] {
+    border-left-width: 5px;
+}
+[add-border-bottom=""] {
+    border-bottom-width: 5px;
+}
 
 #sudoku-container {
     background-color: #aaddaa;
